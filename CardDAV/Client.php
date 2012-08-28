@@ -99,7 +99,7 @@
 
 
 // Namespacing code added by barnaby walters to conform with my autoloading and ns conventions
-namespace CardDAV;
+namespace barnabywalters\CardDAV;
 
 use \Exception, \SimpleXMLElement, \XMLWriter;
 
