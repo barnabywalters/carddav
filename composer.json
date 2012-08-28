@@ -1,0 +1,10 @@
+{
+    "name": "barnabywalters/carddav",
+    "type": "library",
+    "description": "CardDAV Client",
+    "autoload": {
+        "psr-0": {
+            "CardDAV": ""
+        }
+    }
+}
