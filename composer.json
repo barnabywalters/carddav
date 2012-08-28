@@ -4,7 +4,7 @@
     "description": "CardDAV Client",
     "autoload": {
         "psr-0": {
-            "CardDAV": ""
+            "barnabywalters\\CardDAV": ""
         }
     }
 }
