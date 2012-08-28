@@ -1,7 +1,7 @@
 {
     "name": "barnabywalters/carddav",
     "type": "library",
-    "description": "CardDAV Client",
+    "description": "Christian Putzke's CardDAV Client made composer/PSR 0 compliant",
     "autoload": {
         "psr-0": {
             "barnabywalters\\CardDAV": ""
