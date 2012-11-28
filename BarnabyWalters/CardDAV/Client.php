@@ -1,5 +1,8 @@
 <?php
 
+// Namespacing code added by barnaby walters to conform with my autoloading and ns conventions
+namespace BarnabyWalters\CardDAV;
+
 /**
  * CardDAV PHP
  *
@@ -96,10 +99,6 @@
  * @license http://www.gnu.org/licenses/agpl.html GNU AGPL v3 or later
  *
  */
-
-
-// Namespacing code added by barnaby walters to conform with my autoloading and ns conventions
-namespace barnabywalters\CardDAV;
 
 use \Exception, \SimpleXMLElement, \XMLWriter;
 
