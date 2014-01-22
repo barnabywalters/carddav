@@ -8,35 +8,35 @@ namespace BarnabyWalters\CardDAV;
  *
  * Simple CardDAV query
  * --------------------
- * $carddav = new carddav_backend('https://davical.example.com/user/contacts/');
+ * $carddav = new Client('https://davical.example.com/user/contacts/');
  * $carddav->set_auth('username', 'password');
  * echo $carddav->get();
  *
  *
  * Simple vCard query
  * ------------------
- * $carddav = new carddav_backend('https://davical.example.com/user/contacts/');
+ * $carddav = new Client('https://davical.example.com/user/contacts/');
  * $carddav->set_auth('username', 'password');
  * echo $carddav->get_vcard('0126FFB4-2EB74D0A-302EA17F');
  *
  *
  * XML vCard query
  * ------------------
- * $carddav = new carddav_backend('https://davical.example.com/user/contacts/');
+ * $carddav = new Client('https://davical.example.com/user/contacts/');
  * $carddav->set_auth('username', 'password');
  * echo $carddav->get_xml_vcard('0126FFB4-2EB74D0A-302EA17F');
  *
  *
  * Check CardDAV server connection
  * -------------------------------
- * $carddav = new carddav_backend('https://davical.example.com/user/contacts/');
+ * $carddav = new Client('https://davical.example.com/user/contacts/');
  * $carddav->set_auth('username', 'password');
  * var_dump($carddav->check_connection());
  *
  *
  * CardDAV delete query
  * --------------------
- * $carddav = new carddav_backend('https://davical.example.com/user/contacts/');
+ * $carddav = new Client('https://davical.example.com/user/contacts/');
  * $carddav->set_auth('username', 'password');
  * $carddav->delete('0126FFB4-2EB74D0A-302EA17F');
  *
@@ -51,7 +51,7 @@ namespace BarnabyWalters\CardDAV;
  * EMAIL;TYPE=OTHER:christian.putzke@graviox.de
  * END:VCARD';
  *
- * $carddav = new carddav_backend('https://davical.example.com/user/contacts/');
+ * $carddav = new Client('https://davical.example.com/user/contacts/');
  * $carddav->set_auth('username', 'password');
  * $vcard_id = $carddav->add($vcard);
  *
@@ -66,14 +66,14 @@ namespace BarnabyWalters\CardDAV;
  * EMAIL;TYPE=OTHER:christian.putzke@graviox.de
  * END:VCARD';
  *
- * $carddav = new carddav_backend('https://davical.example.com/user/contacts/');
+ * $carddav = new Client('https://davical.example.com/user/contacts/');
  * $carddav->set_auth('username', 'password');
  * $carddav->update($vcard, '0126FFB4-2EB74D0A-302EA17F');
  *
  *
  * CardDAV debug
  * -------------
- * $carddav = new carddav_backend('https://davical.example.com/user/contacts/');
+ * $carddav = new Client('https://davical.example.com/user/contacts/');
  * $carddav->enable_debug();
  * $carddav->set_auth('username', 'password');
  * $carddav->get();
@@ -673,7 +673,7 @@ class Client
 
 		try
 		{
-			$carddav = new carddav_backend($this->url);
+			$carddav = new Client($this->url);
 			$carddav->set_auth($this->username, $this->password);
 
 			$result = $carddav->query($this->url . $vcard_id . '.vcf', 'GET');
