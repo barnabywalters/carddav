@@ -655,7 +655,7 @@ class Client
 	 *
 	 * @return	string	$vcard_id	Valid vCard id
 	 */
-	private function generate_vcard_id()
+	public function generate_vcard_id()
 	{
 		$vcard_id = null;
 
