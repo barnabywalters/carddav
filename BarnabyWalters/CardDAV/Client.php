@@ -287,7 +287,7 @@ class Client
 			break;
 
 			default:
-				throw new Exception('Woops, something\'s gone wrong! The CardDAV server returned the http status code ' . $result['http_code'] . '.', self::EXCEPTION_WRONG_HTTP_STATUS_CODE_GET);
+				throw new Exception('Woops, something\'s gone wrong! The CardDAV server returned the http status code ' . $result['http_code'] . '. The server\'s respons was: ' . $result['response'], self::EXCEPTION_WRONG_HTTP_STATUS_CODE_GET_XML_VCARD);
 			break;
 		}
 	}
@@ -351,7 +351,7 @@ class Client
 			break;
 
 			default:
-				throw new Exception('Woops, something\'s gone wrong! The CardDAV server returned the http status code ' . $result['http_code'] . '.', self::EXCEPTION_WRONG_HTTP_STATUS_CODE_GET_XML_VCARD);
+				throw new Exception('Woops, something\'s gone wrong! The CardDAV server returned the http status code ' . $result['http_code'] . '. The server\'s respons was: ' . $result['response'], self::EXCEPTION_WRONG_HTTP_STATUS_CODE_GET_XML_VCARD);
 			break;
 		}
 	}
@@ -415,7 +415,7 @@ class Client
 			break;
 
 			default:
-				throw new Exception('Woops, something\'s gone wrong! The CardDAV server returned the http status code ' . $result['http_code'] . '.', self::EXCEPTION_WRONG_HTTP_STATUS_CODE_DELETE);
+				throw new Exception('Woops, something\'s gone wrong! The CardDAV server returned the http status code ' . $result['http_code'] . '. The server\'s respons was: ' . $result['response'], self::EXCEPTION_WRONG_HTTP_STATUS_CODE_GET_XML_VCARD);
 			break;
 		}
 	}
@@ -443,7 +443,7 @@ class Client
 			break;
 
 			default:
-				throw new Exception('Woops, something\'s gone wrong! The CardDAV server returned the http status code ' . $result['http_code'] . '.', self::EXCEPTION_WRONG_HTTP_STATUS_CODE_ADD);
+				throw new Exception('Woops, something\'s gone wrong! The CardDAV server returned the http status code ' . $result['http_code'] . '. The server\'s respons was: ' . $result['response'], self::EXCEPTION_WRONG_HTTP_STATUS_CODE_GET_XML_VCARD);
 			break;
 		}
 	}
